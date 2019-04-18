@@ -1,0 +1,121 @@
+
+
+
+
+
+.skillsContainer{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:stretch;
+    z-index: 4;
+    font-family: 'Cinzel Decorative', cursive; 
+    text-transform: lowercase; 
+  }
+  
+  
+  .skillsContainer div {
+    flex-basis: 30%;
+    text-align: center;   
+  }
+  .skillsContainer i { 
+    font-size: 4em;
+  }
+  .skillsContainer div span{
+    display: block;
+  }
+  
+  
+  /*hovery dla wszystkich skilli*/
+  
+  .fa-html5:hover{
+    color: rgba(227,76,38);
+  }
+  .fa-css3-alt:hover{
+    color: rgba(47,128,191)
+  }
+  .fa-js:hover{
+    color: rgba(247,223,30)
+  }
+  .fa-react:hover{
+    color: rgba(97,218,251)
+  }
+  .fa-git-square:hover{
+    color: rgba(0,0,0)
+  }
+  .skillsContainer .fab {
+    cursor: pointer;
+  }
+  
+  
+
+  /*druga cześć skilss */
+  .skillsSecondPart{
+    position: absolute;
+    bottom:4%;
+    right:4%;
+    background-color: transparent;
+    border:none;
+    font-size: 2em;
+    z-index: 5;
+   
+  }
+  .skillsSecondPart i {
+    color:white;
+    text-shadow: 2px 2px 2px black
+  }
+
+
+
+
+
+
+  @media (min-width:600px){
+   
+    .skillsContainer{
+     top:35%;
+    }    
+    
+  }
+
+  @media(min-width:900px){
+    .skillsContainer{
+      top: 20%;
+      align-items:center;
+    }
+
+
+    .skillsContainer div {
+      flex-basis: 19%;
+      text-align: center;   
+    }
+    .skillsContainer i { 
+      font-size: 4em;
+    }
+
+    .skillsSecondPart{
+      position: absolute;
+      bottom:6%;
+  }
+}
+
+@media(min-width:1024px){
+
+  .skillsContainer{
+    width: 80%;
+    transform: translateX(-10%);
+  }
+}
+
+@media (orientation:portrait) and (min-width:1024px) {
+  .skillsContainer div {
+    flex-basis: 30%;
+  }
+
+}

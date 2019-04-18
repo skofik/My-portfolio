@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 16px;
+}
+
+.App {
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/tlo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.App section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  min-width: 320px;
+}
+
+/*nawigacja */
+header {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  /* z-index: 2; */
+  min-width: 160px;
+  max-width: 792px;
+}
+
+header nav {
+  width: 100%;
+  height: 100%;
+  /* margin-top: 40%; */
+  display: flex;
+  align-items: stretch;
+  align-content: space-around;
+  justify-content: space-around;
+  background-color: rgb(0, 0, 0, 0.8);
+  transition: 0.4s linear;
+ 
+}
+
+nav ul {
+  width: 100%;
+  height: 60%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 40%;
+  text-align: center;
+ list-style-type: none;
+  
+}
+nav ul li {
+  width: 70%;
+  /* border-bottom: solid 4px white;
+  border-top: solid 2px white;
+  border-radius: 35%; */
+  text-align: center;
+  cursor: pointer;
+  
+}
+
+/* nav ul li:hover { 
+  background-color: white;
+  border-bottom: solid 4px black;
+  border-top: solid 2px black;
+  box-shadow: 0 0 50px black inset;
+  text-shadow: 1px 1px 1px black;
+} */
+
+nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none; 
+  text-shadow: 1px 1px 1px black;
+  padding:5% 0;
+  border-bottom: solid 4px white;
+  border-top: solid 2px white;
+  border-radius: 35%;
+  
+}
+/* nav ul li a:hover {
+  color: black;
+} */
+
+
+/* przycisk hamburger */
+span.buttonHamburger {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  transition: 0.2s linear;
+  border: solid 2px white;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
+  line-height: 20px;
+  z-index: 1;
+  transition: 0.4s linear;
+}
+span.buttonHamburger i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  font-size: 1.3em;
+}
+span.buttonHamburger:hover {
+  box-shadow: 0 0 10px white inset;
+}
+
+/* Home container*/
+.containerText {
+  position: absolute;
+  top: 10%;
+  left:5%;
+  width: 90%;
+  box-shadow: -50px 0px 0px rgb(0,0,0, 0.15); 
+  border-left: solid 1px #00FFB5;
+  z-index: 1;
+
+}
+ .containerText p {
+  padding-left: 3%;
+  font-family: 'Cinzel Decorative', cursive; 
+  font-size: 12px;
+  padding-bottom: 3%;
+}
+.containerText h1{
+  font-size: 22px;
+  padding-bottom: 5%;
+  padding-left: 3%;
+  font-family: 'Shojumaru', cursive;
+  font-style: italic;
+  color: #00FFB5;
+   font-weight: lighter;
+  text-shadow: 2px 2px 2px black;
+ 
+}
+
+/* all without home page conteiner Text*/
+/* .containerText {
+  position: absolute;
+  top: 5%;
+  left:5%;
+  width: 90%;
+  box-shadow: -50px 0px 0px rgb(0,0,0, 0.15); 
+  border-left: solid 1px #00FFB5
+}
+ .containerText p {
+  padding-left: 3%;
+  font-family: 'Cinzel Decorative', cursive; 
+  font-size: 13px;
+  padding-bottom: 3%;
+  text-transform: lowercase;
+}
+.containerText h1{
+  font-size: 22px;
+  padding-bottom: 5%;
+  padding-left: 3%;
+  font-family: 'Shojumaru', cursive;
+  font-style: italic;
+  color: #00FFB5;
+   font-weight: lighter;
+  /* text-shadow: 1px 1px 1px white; */
+ /* text-shadow: 1px 1px 1px black
+} */
+
+
+/*aktywny przycisk menu */
+   li a.active {
+   border-bottom:  solid 2px white;
+    border-top:  solid 2px white;
+    border-radius: 35%;
+    /* box-shadow: 0px 0px 5px white inset; */
+    box-shadow: 0px 0px 5px black inset;
+    color: white;
+   }
+    
+
+
+/*media Queris */
+
+@media (min-width: 360px) and (orientation: portrait) and (max-height: 464px){
+  .containerText {
+    top: 3%; 
+  }
+  .containerText h1{
+    font-size: 2.2em; 
+    }
+    .containerText p {
+      font-size: 1.2em; 
+    }
+
+}
+
+
+@media (min-width: 500px) {
+  header {
+    width: 30%;
+    
+  /* background-color: #00FFB5; */
+
+  }
+  span.buttonHamburger {
+    width: 40px;
+    height: 40px;   
+  }
+  span.buttonHamburger i {
+    font-size: 1.4em;
+  }
+  .containerText {
+    top: 5%; 
+  }
+  .containerText h1{
+font-size: 2em; 
+}
+.containerText p {
+  font-size: 1em; 
+}
+}
+
+
+
+@media (min-width: 600px) {
+  .App {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/tłolandscape2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+
+@media (min-width: 900px) {
+  .App section {
+    height: 90%;
+    transform: translate(-50%,-40%);
+  
+   
+  }
+  header {
+    width: 55%;
+    height: 10%;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+      z-index: 2;
+  /* background-color: #00FFB5; */
+
+  }
+  
+  header nav {
+    width:100%;
+    height: 100%;
+    background-color: transparent;
+    transform: translateX(0%) !important;
+   
+   
+  }
+  
+  nav ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0%;
+    text-align: center;
+   list-style-type: none;
+    
+  }
+  nav ul li {
+    width: 20%;
+    /* border-bottom: solid 2px white;
+    border-top:none;  */
+
+  }
+
+  nav ul li a {
+    border-bottom: solid 2px white;
+    border-top:none; 
+  }
+
+  
+  nav ul li a:hover { 
+    background-color: transparent;
+    border-bottom:  solid 2px white;
+    border-top:  solid 2px white;
+    box-shadow: 0px 0px 5px white inset;
+    color:white;
+    text-shadow: 0px 0px 1px white;
+  }
+ 
+ 
+  
+  nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none; 
+    text-shadow: 1px 1px 1px black;
+ 
+  }
+  span.buttonHamburger {
+    display: none;
+  }
+  /*ustawienie napisu i podpisu*/
+  .containerText {
+    top: -10%;
+  }
+  .containerText h1{
+    font-size: 1.8em; 
+    padding-bottom: 3%;
+    }
+    .containerText p {
+      font-size: 1em; 
+    }
+   
+ 
+
+}
+
+
+@media (min-height: 560px) and  (min-width: 600px){
+  body{
+    font-size: 19px;
+  }
+}
+@media (min-height: 660px) and (min-width: 600px){
+  body{
+    font-size: 16px;
+  }
+}
+
+
+@media (min-height: 760px) and  (min-width: 600px) {
+  body{
+    font-size: 17px;
+  }
+  span.buttonHamburger i {
+   
+    font-size: .9em;
+  }
+}
+@media (min-height: 760px){
+  body{
+    font-size: 25px;
+  }
+  span.buttonHamburger i {
+   
+    font-size: 1em;
+  }
+}
+
+@media (orientation:portrait) and (min-width: 768px) and (min-height:1024px) {
+  body{
+    font-size: 32px;
+  }
+  span.buttonHamburger i {
+    font-size: .6em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+

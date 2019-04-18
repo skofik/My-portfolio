@@ -1,0 +1,38 @@
+
+
+
+
+/*Contact*/
+.contact{
+    position: absolute;
+    top:50%;
+    right:50%;
+    transform: translate(50%,-50%);
+    width: 100%;
+    font-size: 1.3em;
+    z-index: 5;
+  }
+  .contact ul {
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+  }
+  .contact ul li{
+    width:100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  .contact a {
+    cursor: pointer;
+    display: block;
+    
+    text-decoration: none;
+    color: white;
+  }
+  .contact a i {
+    padding-right: 3%;
+  }
+  .contact a:hover{
+    color: #00FFB5;
+   
+  }

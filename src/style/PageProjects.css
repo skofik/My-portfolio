@@ -1,0 +1,394 @@
+
+
+.containerProjects {
+    position: relative;
+    top:25%;
+    right:0%;
+    width: 100%;
+    height: 75%;
+    z-index: 5;
+ min-height: 325px;
+ 
+
+}
+
+.singleProject{ 
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    text-transform: lowercase;
+    font-size: .7em;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #00FFB5;
+    backface-visibility: visible;
+    filter: grayscale(100%);
+    color: gray;
+    font-family: 'Cinzel Decorative', cursive; 
+    transition: 0.3s linear; 
+}
+
+
+
+.singleProjectLink{
+  width: 100%;
+  height:10%;
+  /* background-color: #00FFB5; */
+  display: flex;
+  flex-basis: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.singleProjectLink a {
+    display:inline-block;
+    width: 40%;
+    text-align: center;
+    text-decoration: none;
+    margin: auto auto;
+    color: inherit;
+   
+}
+
+
+.singleProjectImg{
+    width:100%;
+    height: 50%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+}
+
+.singleProjectImg div {
+width: 100%;
+height:80%;
+
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position:  center center;
+
+}
+
+.singleProjectImg h2 {
+  font-size: 1.5em;
+  height: 15%;
+  padding-top:1%;
+  color: white;
+  
+}
+
+.one .singleProjectImg  div{
+ background-image: url(../img/Project-Tic-tac-toe320x171.jpg);
+
+}
+
+
+
+
+
+.singleProjectText{
+    width: 100%;
+    height: 40%;
+    padding: 1%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.1);
+    font-size: 1em;
+}
+.singleProjectText p{
+  padding: 1%;
+}
+
+.singleProjectText span {
+    display: inline-block;
+    padding: 1%;
+   margin:2%;
+   border: 1px solid gray;
+  
+}
+
+/*galeria 3d*/
+.containerProjectsRotate{
+    position: absolute;
+    /* position: relative; */
+    top:50%;
+    right:50%;
+    transform: translate(50%,-50%);
+    width: 55%;
+    /* width:176px; */
+    height: 85%;
+    /* background-color: green; */
+    perspective: 600px;
+}
+.projectsRotate{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform .5s linear;
+}
+
+
+
+.one {
+    transform: rotateY(0deg) translateZ(9em) scale(0.4);  
+  
+  }
+
+  .two {
+    
+    transform: rotateY(72deg) translateZ(9em) scale(0.4);
+  }
+  
+  .three{
+    transform: rotateY(144deg) translateZ(9em) scale(0.4);
+   
+  }
+  .four {
+    transform: rotateY(216deg) translateZ(9em) scale(0.4);
+    
+  }
+  .five{
+    transform: rotateY(288deg) translateZ(9em) scale(0.4);
+    
+  }
+
+
+  /*hovery dla kazdego*/
+
+  /* .a:hover {
+    transform: rotateY(0deg)  scale(1);  
+    filter: none;
+    color: rgba(255,255,255);
+  } */
+  /* .a:hover a{
+      color:rgba(255,255,255);
+  }
+  
+  .b:hover {
+    transform: rotateY(72deg) scale(1);
+    filter: none;
+    color:rgba(255,255,255);
+  }
+  .b:hover a{
+    color:rgba(255,255,255);
+}
+  
+  .c:hover{
+    transform: rotateY(144deg) scale(1);
+    filter: none;
+    color:rgba(255,255,255);
+   
+  }
+  .c:hover a{
+    color:rgba(255,255,255);
+}
+  .d:hover {
+    transform: rotateY(216deg) scale(1);
+    filter: none;
+    color:rgba(255,255,255);
+    
+  }
+
+  .d:hover a{
+    color:white;
+}
+  .e:hover {
+    transform: rotateY(288deg) scale(1);
+    filter: none;
+    color:rgba(255,255,255);
+
+  }
+
+  .e:hover a{
+    
+    color:rgba(255,255,255);
+} */
+
+
+
+  /*strzałki*/
+  .containerProjects i{
+      font-size: 1.3em;
+  }
+  .containerProjects .fa-arrow-right {
+      position: absolute;
+      top:50%;
+      right:6%;
+    
+
+  }
+  .containerProjects .fa-arrow-left {
+    position: absolute;
+    top:50%;
+    left:6%;
+
+
+}
+  
+    
+
+/*Media Queris*/
+@media (min-width:350px){
+  .containerProjectsRotate{
+    width: 50%;
+   
+}
+.singleProjectText{
+  font-size: .8em;
+}
+}
+
+@media (min-width:420px){
+
+  .containerProjectsRotate{
+    width: 45%;
+   
+}
+}
+
+@media (min-width:460px){
+
+  .containerProjects {
+    width: 80%;
+  transform:translateX(10%);
+ 
+}
+
+  .containerProjectsRotate{
+    width: 45%;
+}
+
+.singleProject{ 
+  font-size: .7em;
+}
+.singleProjectText{
+  font-size: .7em;
+}
+.singleProjectImg h2 {
+  font-size: 1.3em;
+}
+}
+@media (min-width:512px){
+  .containerProjects {
+    width: 80%;
+}
+
+  .containerProjectsRotate{
+    width: 50%;
+}
+
+.singleProject{ 
+  font-size: 1em;
+}
+.singleProjectImg h2 {
+  font-size: 1.3em;
+}
+
+}
+
+@media (min-width:650px){
+  .containerProjects {
+    width: 60%;
+    transform:translateX(30%);
+}
+.singleProjectImg h2 {
+  font-size: 1.2em;
+}
+}
+
+@media (min-width:800px){
+  .containerProjects {
+    top:30%;
+    width: 50%;
+    height: 70%;
+    transform:translateX(50%);
+}
+.singleProjectImg h2 {
+  font-size: 1.2em;
+}
+}
+
+@media (min-width:900px){
+  .containerProjects {
+    top:20%;
+    width: 45%;
+    transform:translateX(60%);
+}
+.singleProjectImg h2 {
+  font-size: 1.2em;
+}
+}
+
+
+@media (min-width:1200px){
+  .containerProjects {
+    top:20%;
+    width: 35%;
+    transform:translateX(90%);
+}
+.singleProjectImg h2 {
+  font-size: 1.2em;
+}
+
+
+
+.one {
+  transform: rotateY(0deg) translateZ(8em) scale(0.4);  
+
+}
+
+.two {
+  
+  transform: rotateY(72deg) translateZ(8em) scale(0.4);
+}
+
+.three{
+  transform: rotateY(144deg) translateZ(8em) scale(0.4);
+ 
+}
+.four {
+  transform: rotateY(216deg) translateZ(8em) scale(0.4);
+  
+}
+.five{
+  transform: rotateY(288deg) translateZ(8em) scale(0.4);
+  
+}
+
+}
+
+@media (min-width:1400px){
+  .one {
+    transform: rotateY(0deg) translateZ(9em) scale(0.4);  
+  
+  }
+  
+  .two {
+    
+    transform: rotateY(72deg) translateZ(9em) scale(0.4);
+  }
+  
+  .three{
+    transform: rotateY(144deg) translateZ(9em) scale(0.4);
+   
+  }
+  .four {
+    transform: rotateY(216deg) translateZ(9em) scale(0.4);
+    
+  }
+  .five{
+    transform: rotateY(288deg) translateZ(9em) scale(0.4);
+    
+  }
+
+
+}
