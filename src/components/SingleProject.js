@@ -2,28 +2,48 @@
 import React from "react";
 import "../style/PageProjects.css"
 
-const SingleProject = () => {
-
-
-    //stworzyc automatyczne dodawanie projektow 
+const SingleProject = (props) => {
 
 
 
+    const rotateDeg = () => {
+        if (props.number === 0) {
+            return 0
+        } else if (props.number === 4) {
+            return 72
+        } else if (props.number === 3) {
+            return 144
+        } else if (props.number === 2) {
+            return 216
+        } else if (props.number === 1) {
+            return 288
+        }
+    }
+
+    const styleSingleProject = {
+        transform: `rotateY(${rotateDeg()}deg)`,
+        filter: " none",
+        color: "rgba(255,255,255)",
+        transition: " .8s linear",
+    }
 
 
+    const { orderName, title, code, live, text, technologies, id } = props.project;
 
 
 
     return (
-        <article className="singleProject one" style={this.number === 0 ? styleSingleProject : null} >
-            <div className="singleProjectImg"> <h2>Tic-tac-toe</h2>
+        <article className={orderName} style={props.number === id ? styleSingleProject : null} >
+            <div className="singleProjectImg"><h2>{title}</h2> <div></div>
             </div>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/skofik/Game-Tic-tac-toe">kod</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://skofik.github.io/Game-Tic-tac-toe/" >live</a>
+            <div className="singleProjectLink">
+                <a target="_blank" rel="noopener noreferrer" href={code}>kod</a>
+                <a target="_blank" rel="noopener noreferrer" href={live} >live</a>
+            </div>
             <div className="singleProjectText">
-                <p>This is my first game where you can save the result and choose the level of difficulty</p>
-                <p>used technologies:</p>
-                <span>css</span> <span>js</span> <span>html</span>
+                <p>{text}</p>
+
+                {technologies.map(technology => (<span key={technology}>{technology}</span>))}
             </div>
         </article>
     );

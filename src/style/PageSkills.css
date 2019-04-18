@@ -7,13 +7,14 @@
     width: 100%;
     height: 70%;
     position: absolute;
-    top: 30%;
+    bottom: 3%;
     right: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items:stretch;
+   
+    align-content: space-around;
     z-index: 4;
     font-family: 'Cinzel Decorative', cursive; 
     text-transform: lowercase; 
@@ -49,7 +50,22 @@
   .fa-git-square:hover{
     color: rgba(0,0,0)
   }
-  .skillsContainer .fab {
+.fa-database:hover{
+  color: rgba(66,139,199);
+}
+.fa-node:hover{
+  color: rgba(77,141,69);
+}
+.fa-php:hover{
+  color: rgba(119,123,179);
+}
+.fa-java:hover{
+  color: rgba(233,35,46);
+}
+
+
+
+  .skillsContainer .fab, .fas {
     cursor: pointer;
   }
   
@@ -58,7 +74,7 @@
   /*druga cześć skilss */
   .skillsSecondPart{
     position: absolute;
-    bottom:4%;
+    bottom:8%;
     right:4%;
     background-color: transparent;
     border:none;
@@ -86,7 +102,7 @@
 
   @media(min-width:900px){
     .skillsContainer{
-      top: 20%;
+      top: 5%;
       align-items:center;
     }
 
@@ -98,11 +114,11 @@
     .skillsContainer i { 
       font-size: 4em;
     }
-
     .skillsSecondPart{
-      position: absolute;
-      bottom:6%;
+      bottom:14%;
   }
+
+  
 }
 
 @media(min-width:1024px){
@@ -111,6 +127,7 @@
     width: 80%;
     transform: translateX(-10%);
   }
+  
 }
 
 @media (orientation:portrait) and (min-width:1024px) {

@@ -17,15 +17,16 @@ class App extends Component {
     }));
   };
   render() {
-    console.log(this.state.active);
+    const { active } = this.state;
+
     return (
       <BrowserRouter>
         <div className="App">
-          <header style={this.state.active ? { zIndex: "6" } : null}>
-            <span className="buttonHamburger" onClick={this.handleMenuButton} style={this.state.active ? { right: "20%" } : { transform: "translateX(0%)" }} >
-              {this.state.active ? <i className="fas fa-arrow-right" ></i> : <i className="fas fa-bars" />}
+          <header style={active ? { zIndex: "6" } : null}>
+            <span className="buttonHamburger" onClick={this.handleMenuButton} style={active ? { right: "20%" } : { transform: "translateX(0%)" }} >
+              {active ? <i className="fas fa-arrow-right" ></i> : <i className="fas fa-bars" />}
             </span>
-            <nav style={this.state.active ? { transform: "translateX(0%)" } : { transform: "translateX(120%)" }}>
+            <nav style={active ? { transform: "translateX(0%)" } : { transform: "translateX(120%)" }}>
               <ul>
                 <li> <NavLink to="/" onClick={this.handleMenuButton} exact >Home</NavLink> </li>
                 <li> <NavLink to="/Skills" onClick={this.handleMenuButton}>Skills</NavLink> </li>
@@ -40,7 +41,11 @@ class App extends Component {
             <Route path="/Projects" exact component={Projects} />
             <Route path="/Contact" exact component={Contact} />
           </section>
-
+          <footer className="footer">
+            <span>
+              <p>Copyright @ 2019. Daniel Skowron </p> <a target="_blank" rel="noopener noreferrer" href="http://www.freepik.com"> background Designed by Freepik</a>
+            </span>
+          </footer>
         </div>
       </BrowserRouter>
     );

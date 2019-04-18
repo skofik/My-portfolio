@@ -56,6 +56,10 @@
     color: inherit;
    
 }
+.singleProjectLink a:hover{
+  color: #00FFB5;
+}
+
 
 
 .singleProjectImg{
@@ -82,13 +86,27 @@ height:80%;
   font-size: 1.5em;
   height: 15%;
   padding-top:1%;
-  color: white;
-  
+  color: white; 
 }
 
-.one .singleProjectImg  div{
- background-image: url(../img/Project-Tic-tac-toe320x171.jpg);
+/* Adding a background to the project */
 
+.one .singleProjectImg  div{
+ background-image: url(../img/Project-Tic-tac-toe640x343.jpg);
+
+}
+.two .singleProjectImg  div{
+  background-image: url(../img/Calorie-counter665x307.jpg);
+}
+.three .singleProjectImg  div{
+  background-image: url(../img/Portfolio681x311.jpg);
+}
+.four .singleProjectImg  div{
+  background-image: url(../img/Portfolio681x311.jpg);
+}
+.five .singleProjectImg  div{
+  /* background-image: url(../img/Portfolio681x311.jpg); */
+  background-color: black;
 }
 
 
@@ -104,13 +122,14 @@ height:80%;
     font-size: 1em;
 }
 .singleProjectText p{
-  padding: 1%;
+  padding: 2%;
 }
 
 .singleProjectText span {
     display: inline-block;
     padding: 1%;
    margin:2%;
+   margin-top: 5%;
    border: 1px solid gray;
   
 }
@@ -162,63 +181,14 @@ height:80%;
   }
 
 
-  /*hovery dla kazdego*/
-
-  /* .a:hover {
-    transform: rotateY(0deg)  scale(1);  
-    filter: none;
-    color: rgba(255,255,255);
-  } */
-  /* .a:hover a{
-      color:rgba(255,255,255);
-  }
-  
-  .b:hover {
-    transform: rotateY(72deg) scale(1);
-    filter: none;
-    color:rgba(255,255,255);
-  }
-  .b:hover a{
-    color:rgba(255,255,255);
-}
-  
-  .c:hover{
-    transform: rotateY(144deg) scale(1);
-    filter: none;
-    color:rgba(255,255,255);
-   
-  }
-  .c:hover a{
-    color:rgba(255,255,255);
-}
-  .d:hover {
-    transform: rotateY(216deg) scale(1);
-    filter: none;
-    color:rgba(255,255,255);
-    
-  }
-
-  .d:hover a{
-    color:white;
-}
-  .e:hover {
-    transform: rotateY(288deg) scale(1);
-    filter: none;
-    color:rgba(255,255,255);
-
-  }
-
-  .e:hover a{
-    
-    color:rgba(255,255,255);
-} */
-
 
 
   /*strzałki*/
   .containerProjects i{
       font-size: 1.3em;
+      cursor: pointer;
   }
+  
   .containerProjects .fa-arrow-right {
       position: absolute;
       top:50%;
@@ -230,9 +200,10 @@ height:80%;
     position: absolute;
     top:50%;
     left:6%;
-
-
 }
+
+
+
   
     
 

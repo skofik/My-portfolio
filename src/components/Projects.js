@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "../style/PageProjects.css"
+import SingleProject from './SingleProject';
 
 
 class Projects extends Component {
@@ -11,9 +12,57 @@ class Projects extends Component {
         clickCountLeft: 0,
     }
     number = 0;
+    projects = {
+        one: {
+            id: 0,
+            orderName: "singleProject one",
+            title: "Tic-tac-toe",
+            code: "https://github.com/skofik/Game-Tic-tac-toe",
+            live: "https://skofik.github.io/Game-Tic-tac-toe/",
+            text: "This is my first game where you can save the result and choose the level of difficulty",
+            technologies: ["css", "js", "html"],
+
+        },
+        two: {
+            id: 4,
+            orderName: "singleProject two",
+            title: "Calorie-counter",
+            code: "4",
+            live: "4",
+            text: "this is my first app in which you can calculate your daily calorie needs",
+            technologies: ["css", "html", "react"]
+        },
+        three: {
+            id: 3,
+            orderName: "singleProject three",
+            title: "Portfolio",
+            code: "3",
+            live: "3",
+            text: "This is my single page application create in React",
+            technologies: ["css", "html", "react"]
+        },
+        four: {
+            id: 2,
+            orderName: "singleProject four",
+            title: "Gallery 3D",
+            code: "2",
+            live: "2",
+            text: "You can choose number picture which you want see",
+            technologies: ["css", "html", "react"]
+        },
+        five: {
+            id: 1,
+            orderName: "singleProject five",
+            title: "page sewing",
+            code: "2",
+            live: "2",
+            text: "not yet completed",
+            technologies: ["css", "html", "react"]
+        },
+    }
 
 
-
+    // function change picture 
     handleChangePicture = (e) => {
 
         if ((this.number > 3) && (e.target.className === "fas fa-arrow-right")) {
@@ -24,8 +73,6 @@ class Projects extends Component {
                 activeRight: false,
                 activeLeft: false,
             })
-
-
         } else if ((this.number === 1) && (e.target.className === "fas fa-arrow-left")) {
             this.setState({
                 rotateNumber: this.state.rotateNumber - 72,
@@ -34,17 +81,12 @@ class Projects extends Component {
                 activeLeft: false,
                 activeRight: false,
             })
-
-
         }
         else if (e.target.className === "fas fa-arrow-right") {
             this.setState({
                 rotateNumber: this.state.rotateNumber + 72,
                 clickCountRight: this.state.clickCountRight + 1,
                 activeRight: true,
-
-
-
             })
 
         } else if (e.target.className === "fas fa-arrow-left") {
@@ -58,39 +100,23 @@ class Projects extends Component {
         }
     }
 
-
+    // function that selects the project which is at the front
     handleCheckVisibleProject = () => {
         let numberVisibleProject
+        const { clickCountLeft, clickCountRight, activeLeft, activeRight } = this.state;
 
-        if ((this.state.clickCountRight > 4) && (this.state.clickCountLeft === 0)) {
-
+        if ((clickCountRight > 4) && (clickCountLeft === 0)) {
             numberVisibleProject = 0
-        } else if ((this.state.clickCountLeft > 0) && (this.state.clickCountRight === 0)) {
-            numberVisibleProject = ((5 - this.state.clickCountLeft) - this.state.clickCountRight)
-        }
-        else if (this.state.clickCountRight >= this.state.clickCountLeft) {
-            numberVisibleProject = this.state.clickCountRight - this.state.clickCountLeft
-        } else if ((this.state.clickCountRight <= this.state.clickCountLeft) && (this.state.activeRight === true)) {
+        } else if ((clickCountLeft > 0) && (clickCountRight === 0)) {
+            numberVisibleProject = ((5 - clickCountLeft) - clickCountRight)
+        } else if (clickCountRight >= clickCountLeft) {
+            numberVisibleProject = clickCountRight - clickCountLeft
+        } else if ((clickCountRight <= clickCountLeft) && (activeRight === true)) {
             numberVisibleProject = this.number + 1
-        } else if ((this.state.clickCountRight <= this.state.clickCountLeft) && (this.state.activeLeft === true)) {
+        } else if ((clickCountRight <= clickCountLeft) && (activeLeft === true)) {
             numberVisibleProject = this.number - 1
-
         }
         this.number = numberVisibleProject;
-    }
-
-    rotateDeg = () => {
-        if (this.number === 0) {
-            return 0
-        } else if (this.number === 4) {
-            return 72
-        } else if (this.number === 3) {
-            return 144
-        } else if (this.number === 2) {
-            return 216
-        } else if (this.number === 1) {
-            return 288
-        }
     }
 
 
@@ -99,18 +125,7 @@ class Projects extends Component {
     render() {
 
         this.handleCheckVisibleProject();
-        let colorText = "rgba(255,255,255)"
-
-        const styleSingleProject = {
-            transform: `rotateY(${this.rotateDeg()}deg)`,
-            filter: " none",
-            color: colorText,
-            transition: " .8s linear",
-        }
-
-        console.log(this.number)
-        console.log(`to jest numer kliku w lewo ${this.state.clickCountLeft}`)
-        console.log(`to jest numer kliku w prawo ${this.state.clickCountRight}`)
+        const { one, two, three, four, five } = this.projects
         return (
             <>
                 <div className="containerText">
@@ -120,71 +135,12 @@ class Projects extends Component {
                 <div className="containerProjects">
                     <div className="containerProjectsRotate">
                         <div className="projectsRotate" style={{ transform: `rotateY(${this.state.rotateNumber}deg)` }} >
-                            <article className="singleProject one" style={this.number === 0 ? styleSingleProject : null} >
-                                <div className="singleProjectImg"><h2>Tic-tac-toe</h2> <div></div>
-                                </div>
-                                <div className="singleProjectLink">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/skofik/Game-Tic-tac-toe">kod</a>
-                                    <a target="_blank" rel="noopener noreferrer" href="https://skofik.github.io/Game-Tic-tac-toe/" >live</a>
-                                </div>
-                                <div className="singleProjectText">
-                                    <p>This is my first game where you can save the result and choose the level of difficulty</p>
-                                    <p>used technologies:</p>
-                                    <span>css</span> <span>js</span> <span>html</span>
-                                </div>
-                            </article>
-                            <article className="singleProject two" style={this.number === 4 ? styleSingleProject : null}>
-                                <div className="singleProjectImg"> <h2>Daily-calorie-counter</h2><div></div>
-                                </div>
-                                <div className="singleProjectLink">
-                                    <a target="_blank" rel="noopener noreferrer" href="3">kod</a>
-                                    <a target="_blank" rel="noopener noreferrer" href="3">live</a>
-                                </div>
-                                <div className="singleProjectText">
-                                    <p> this is my first app in which you can calculate your daily calorie needs</p>
-                                    <p>used technologies:</p>
-                                    <span>css</span> <span>html</span><span>React</span>
-                                </div>
-                            </article>
-                            <article className="singleProject three" style={this.number === 3 ? styleSingleProject : null}>
-                                <div className="singleProjectImg"><h2>Daily-calorie-counter</h2><div></div>
-                                </div>
-                                <div className="singleProjectLink">
-                                    <a href="">kod</a>
-                                    <a href="">live</a>
-                                </div>
-                                <div className="singleProjectText" >
-                                    <p>This is my single page application create in React Router</p>
-                                    <p>wykorzystane technologie</p>
-                                    <span>css</span> <span>js</span>
-                                </div>
-                            </article>
-                            <article className="singleProject four" style={this.number === 2 ? styleSingleProject : null}>
-                                <div className="singleProjectImg"><h2>Daily-calorie-counter</h2><div></div>
-                                </div>
-                                <div className="singleProjectLink">
-                                    <a href="">kod</a>
-                                    <a href="">live</a>
-                                </div>
-                                <div className="singleProjectText">
-                                    <p>This is my first game where you can save the result and choose the level of difficulty</p>
-                                    <p>wykorzystane technologie</p>
-                                    <span>css</span> <span>js</span>
-                                </div>
-                            </article>
-                            <article className="singleProject five" style={this.number === 1 ? styleSingleProject : null}>
-                                <div className="singleProjectImg"><h2>in construction</h2><div></div>
-                                </div>
-                                <div className="singleProjectLink">
-                                    <a href="">kod</a>
-                                    <a href="">live</a>
-                                </div>
-                                <div className="singleProjectText">
-                                    <p>...</p>
-                                    <p>..</p>
-                                    <span>..</span> <span>..</span>
-                                </div>
-                            </article>
+
+                            <SingleProject number={this.number} project={one} />
+                            <SingleProject number={this.number} project={two} />
+                            <SingleProject number={this.number} project={three} />
+                            <SingleProject number={this.number} project={four} />
+                            <SingleProject number={this.number} project={five} />
                         </div>
                     </div>
                     <i className="fas fa-arrow-right" onClick={this.handleChangePicture}></i>

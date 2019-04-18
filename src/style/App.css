@@ -5,6 +5,7 @@
 }
 body{
   font-size: 16px;
+  font-family: 'Cinzel Decorative', cursive; 
 }
 
 .App {
@@ -77,13 +78,14 @@ nav ul li {
   
 }
 
-/* nav ul li:hover { 
-  background-color: white;
-  border-bottom: solid 4px black;
-  border-top: solid 2px black;
-  box-shadow: 0 0 50px black inset;
-  text-shadow: 1px 1px 1px black;
-} */
+nav ul li a:hover { 
+  background-color: transparent;
+  border-bottom:  solid 2px white;
+  border-top:  solid 2px white;
+  box-shadow: 0px 0px 5px white inset;
+  color:white;
+  text-shadow: 0px 0px 1px white;
+}
 
 nav ul li a {
   display: block;
@@ -199,6 +201,31 @@ span.buttonHamburger:hover {
     box-shadow: 0px 0px 5px black inset;
     color: white;
    }
+
+/*Foooter*/
+   .footer {
+     background-color: rgba(0,0,0,.5);
+     font-size: .5em;
+     position: fixed;
+     bottom:0%;
+     left:0%;
+     width: 100%;
+     z-index: 1;
+   }
+   .footer span {
+     display: flex;
+     flex-direction: row; 
+     padding: .5%;
+     justify-content: space-between;
+     text-align: center;
+   }
+   .footer p {
+     letter-spacing: .5px; 
+   }
+   .footer a{
+     text-decoration: none;
+     color: white;
+   }
     
 
 
@@ -309,16 +336,6 @@ font-size: 2em;
     border-top:none; 
   }
 
-  
-  nav ul li a:hover { 
-    background-color: transparent;
-    border-bottom:  solid 2px white;
-    border-top:  solid 2px white;
-    box-shadow: 0px 0px 5px white inset;
-    color:white;
-    text-shadow: 0px 0px 1px white;
-  }
- 
  
   
   nav ul li a {
@@ -345,7 +362,10 @@ font-size: 2em;
       font-size: 1em; 
     }
    
- 
+    .footer {
+      
+      font-size: .7em;
+    }
 
 }
 
