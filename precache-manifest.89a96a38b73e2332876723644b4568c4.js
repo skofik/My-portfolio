@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "d12727417021fec07661bd65ec212e6d",
-    "url": "/My-portfolio/static/media/Calorie-counter665x307.d1272741.jpg"
+    "revision": "e323c80a7fd1fe0680869dfa78a1a56f",
+    "url": "/My-portfolio/static/media/Portfolio681x311.e323c80a.jpg"
   },
   {
-    "revision": "0d2544e713836bf2f184",
+    "revision": "3dc242fcc50127bb6d71",
     "url": "/My-portfolio/static/css/main.1cf28ad1.chunk.css"
   },
   {
@@ -20,8 +20,12 @@ self.__precacheManifest = [
     "url": "/My-portfolio/static/media/Project-Tic-tac-toe640x343.399380f0.jpg"
   },
   {
-    "revision": "0d2544e713836bf2f184",
-    "url": "/My-portfolio/static/js/main.0c74d782.chunk.js"
+    "revision": "3dc242fcc50127bb6d71",
+    "url": "/My-portfolio/static/js/main.51d425c3.chunk.js"
+  },
+  {
+    "revision": "d12727417021fec07661bd65ec212e6d",
+    "url": "/My-portfolio/static/media/Calorie-counter665x307.d1272741.jpg"
   },
   {
     "revision": "7d40b6bbf0335ed2fcc229435041f060",
@@ -32,15 +36,11 @@ self.__precacheManifest = [
     "url": "/My-portfolio/static/media/ladyIgy661x314.553331c3.jpg"
   },
   {
-    "revision": "e323c80a7fd1fe0680869dfa78a1a56f",
-    "url": "/My-portfolio/static/media/Portfolio681x311.e323c80a.jpg"
-  },
-  {
     "revision": "77859be09a57fb123bf9c3d200cc893d",
     "url": "/My-portfolio/static/media/tlo.77859be0.svg"
   },
   {
-    "revision": "4a802b54f8a8f694e5b1c4bf8ef114fe",
+    "revision": "720bd7384c430b1c0cc6ac04348c273b",
     "url": "/My-portfolio/index.html"
   }
 ];
