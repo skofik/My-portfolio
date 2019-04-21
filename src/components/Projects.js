@@ -54,8 +54,8 @@ class Projects extends Component {
             id: 1,
             orderName: "singleProject five",
             title: "page sewing",
-            code: "Projects ",
-            live: "Projects",
+            code: "https://skofik.github.io/My-portfolio/",
+            live: "https://skofik.github.io/My-portfolio/",
             text: "not yet completed",
             technologies: ["css", "html", "react"]
         },

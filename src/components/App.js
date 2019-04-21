@@ -37,9 +37,9 @@ class App extends Component {
           </header>
           <section>
             <Route path="/" exact component={Home} />
-            <Route path="/Skills" exact component={Skills} />
-            <Route path="/Projects" exact component={Projects} />
-            <Route path="/Contact" exact component={Contact} />
+            <Route path="/Skills" component={Skills} />
+            <Route path="/Projects" component={Projects} />
+            <Route path="/Contact" component={Contact} />
           </section>
           <footer className="footer">
             <span>

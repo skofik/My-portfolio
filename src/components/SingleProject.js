@@ -37,7 +37,7 @@ const SingleProject = (props) => {
             <div className="singleProjectImg"><h2>{title}</h2> <div></div>
             </div>
             <div className="singleProjectLink">
-                <a target="_blank" rel="noopener noreferrer" href={code}>kod</a>
+                <a target="_blank" rel="noopener noreferrer" href={code}>code</a>
                 <a target="_blank" rel="noopener noreferrer" href={live} >live</a>
             </div>
             <div className="singleProjectText">
