@@ -20,7 +20,7 @@ class App extends Component {
     const { active } = this.state;
 
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className="App">
           <header style={active ? { zIndex: "6" } : null}>
             <span className="buttonHamburger" onClick={this.handleMenuButton} style={active ? { right: "20%" } : { transform: "translateX(0%)" }} >

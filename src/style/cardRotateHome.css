@@ -2,24 +2,24 @@
 
 .card{
     width: 60%;
-    height: 50%;
+    height: 45%;
     position: absolute;
-    top:60%;
+    top:55%;
     left:50%;
     transform: translate(-50%,-50%);
     z-index: 5;
     text-align: center;
-    min-height: 200px;
+    min-height: 262px;
     background-color: transparent;
 }
-.card i {
-  font-size: 1.5em;
-position: relative;
-top:-15%;
-right:0;
 
- 
+.card i {
+    font-size: 1.5em;
+    position: relative;
+    top:-15%;
+    right:0;
 }
+
 .cardContainer{
     text-align: center;
     position: relative;
@@ -27,67 +27,63 @@ right:0;
     width: 100%;
     transition: transform 2s;
     transform-style: preserve-3d;
-    background-color: transparent;
-   
-    
+    background-color: transparent;   
 }
 
 
 .front, .back{
-position: absolute;
-top:0;
-right:0;
-width:100%;
-height:100%;
-transform-style: preserve-3d;
- backface-visibility:hidden;
- color:white;
- border-radius: 15%;
- padding: 5%;
-
-
-
+    position: absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    transform-style: preserve-3d;
+    backface-visibility:hidden;
+    color:white;
+    border-radius: 15%;
+    padding: 5%;
 }
+
 .front div, .back div{
-  width:100%;
-  height: 100%;
- 
+    width:100%;
+    height: 100%; 
 }
-/*wybrac background*/
 
 .back{
-  background-color: rgba(0,0,0,.6);
-   transform: rotateY(180deg);
+    background-color: rgba(0,0,0,.6);
+    transform: rotateY(180deg);
 }
 
 .front{ 
-  background-color: rgba(0,0,0,.6);
-    /* background-color: rgba(255,255,255,0.1); */
+    background-color: rgba(0,0,0,.6);
 }
+
 .front ul, .back ul {
- 
-  margin: 0 auto;
-  width: 70%;
-  list-style-position: outside;
-  list-style-type: circle;
-  text-align: left;
-  font-family: 'Cinzel Decorative', cursive; 
+   margin: 0 auto;
+   width: 70%;
+   list-style-position: outside;
+   list-style-type: circle;
+   text-align: left;
+   font-family: 'Cinzel Decorative', cursive; 
    text-transform: lowercase;
-   font-size: .8em;
+   font-size: 1em;
    font-weight: lighter;
    text-shadow: 1px 1px 1px black;
    background-color: transparent;
+   
 
 
 }
 .back ul {
-  font-size: .6em;
+  font-size: .9em;
+
 
 }
 
 .front ul li, .back ul li {
   width: 100%;
   padding-top: 6%;
+ 
 
 }
 
@@ -101,8 +97,8 @@ transform-style: preserve-3d;
     left: 3%;
     right: 3%;
     border-radius: 15%;
-      transform: translateZ(20px); border: 1px solid #00FFB5;
-      background-color: transparent;
+    transform: translateZ(20px); border: 1px solid #00FFB5;
+    background-color: transparent;
  
 
    
@@ -113,185 +109,117 @@ transform-style: preserve-3d;
 
 
 .front h2, .back h2 {  
-  font-family: 'Shojumaru', cursive;
-  /* color: rgba(0,255,181); */
-  color: #00FFB5;
-   font-weight: lighter;
-  text-shadow: 2px 2px 2px black;
-  font-size: 1em;
+    font-family: 'Shojumaru', cursive;
+    color: #00FFB5;
+    font-weight: lighter;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1em;
+    padding-top: 2%;
  
 }
 
-/*Strzałka zmieniajaca tekst*/
+/*Arrow change text*/
 .back i {
-  position: absolute;
-  top:87%;
-  right:9%;
-  font-size: 1em;
-  transform: translateZ(30px);
-}
-.back i:hover{
-  color:#00FFB5;
-}
-
-
-
-/*Media queris*/
-
-
-@media (min-width: 360px) and (orientation: portrait) and (max-height: 464px){
-  .card{
-    top:65%;
-    height: 50%;}
-
-  .front h2{
-    font-size: 1.7em;
-  } .back h2 {
-    font-size: 1.3em;
-  }
-
-  .front ul{
-  font-size: 1em;
-  } .back ul{
-  
-    font-size: .9em;
-  }
-  
-}
-
-
-
-@media (min-width: 360px) and (orientation: portrait) and (max-height: 736px){
- body{
-   font-size: 22px;
- }
-}
-@media (min-width: 360px) and (orientation: portrait) and (max-height: 465px){
-  body{
-    font-size: 18px;
-  }
-}
-
-
-
-
-
-
-@media (min-width:500px) and (max-height: 465px){
-  .card{
-    width:50%;
-    top:65%;
-    height: 55%;
-  }
- 
-  .front h2{
-    font-size: 1.5em;
-  } .back h2 {
-    font-size: 1.2em;
-  }
-
-  .front ul{
-  font-size: .8em;
-  } .back ul{
-  
-    font-size: .7em;
-  }
-}
-@media (min-width:700px){
-  .card{
-    width:40%;
-   
-  }
-}
-
-@media (min-width: 900px) and (max-height: 465px){
-
- /*ustawienie karty*/
-  .card{
-    top:60%;
-  
-    height: 60%;  
-}
- .back h2 {
-  font-size: 1.4em;
-}
- .back ul{
-  font-size: .8em;
-}
-.front h2{
-  font-size: 1.6em;
-} 
-.front ul{
-  font-size: 1em;
-  }
-  .back i {
     position: absolute;
     top:87%;
     right:9%;
-    font-size: 1.3em;
-    
-  }
-
-
+    font-size: 1em;
+    transform: translateZ(30px);
 }
-@media (min-width: 1024px) {
+
+.back i:hover{
+    color:#00FFB5;
+}
 
 
 
-  .card{
-    width: 30%;
-    top:55%;
-    height: 60%;
+/*Media queries*/
+
+
+@media (max-height: 500px){
+  .front ul, .back ul {
+    font-size: .6em;
   }
+}
 
-   .back h2 {
-    font-size: 1.3em;
-  }
-
-  .front ul{
-  font-size: 1em;
-  } 
-  .back ul{
-  
+@media (max-height: 620px){
+  .front ul, .back ul {
     font-size: .7em;
   }
-   
+}
+@media(min-width:400px){
+  .front ul, .back ul {
+    font-size: .9em;
+  }
+
+  .front h2, .back h2 {  
+    font-size: 1.1em; 
+  }
+}
+@media( min-width: 600px){
+  
+  .front ul {
+    font-size: 1em;
+  }
+  .front h2, .back h2 {  
+    font-size: 1.1em; 
+  }
 }
 
-
-@media (min-width: 1300px) {
+@media (min-width:780px){
 
   .card{
-    width: 25%;
-    top:55%;
-    height: 60%;
+    width:45%;
   }
-  .front h2{
-    font-size: 1.7em;
-  } .back h2 {
-    font-size: 1.4em;
+}
+
+@media (min-width:900px){
+
+  .front ul {
+    font-size: 1.1em;
   }
-  .front ul{
+  .front h2{  
+    font-size: 1.4em; 
+  }
+  .back h2 {
+    font-size: 1.2em; 
+  }
+
+}
+
+@media (min-width:1024px){
+   .back ul {
+    font-size: .8em;
+  }
+  .card{
+    width:35%;
+    height: 50%;
+  }
+}
+@media (min-width:1300px){
+  .back ul {
     font-size: .9em;
-    } 
+  }
+  .card{
+    width:30%;
+  
+  }
+
+}
+
+@media (min-width:1600px){
+
+  .card{
+    width:25%;
     
+  }
 }
 
 
-@media (min-width: 1500px) {
-  body{
-    font-size: 26px;
-  }
 
-}
 
-/*iPad*/
 
-/* @media (orientation:portrait) and (min-width: 768px) and (min-height:1024px) {
-  body{
-    font-size: 32px;
-  }
-} */
+
 
 
 

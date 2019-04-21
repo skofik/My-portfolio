@@ -44,7 +44,7 @@ class CardRotate extends Component {
                             <h2>My sources of knowledge</h2>
                             {this.state.changeText ?
                                 <ul>
-                                    <li>"Przewodnik dla poczatkujacych webmasterow o html5,css3 i grafice" (O`Reilly)</li>
+                                    <li>"P. dla poczatkujacych webmasterow o html5,css3 i grafice" (O`Reilly)</li>
                                     <li>"Pro Git" second edition (S.Chacon and B.Straub) </li>
                                 </ul>
                                 :

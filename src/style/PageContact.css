@@ -9,23 +9,29 @@
     right:50%;
     transform: translate(50%,-50%);
     width: 100%;
-    font-size: 1.3em;
+    height: 40%;
+    font-size: .9em;
     z-index: 5;
   }
   .contact ul {
     width: 100%;
+    height: 100%;
     list-style-type: none;
     text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
   }
-  .contact ul li{
-    width:100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-  }
+  
   .contact a {
+    width: 100%;
     cursor: pointer;
     display: block;
-    
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     text-decoration: none;
     color: white;
   }
@@ -33,6 +39,44 @@
     padding-right: 3%;
   }
   .contact a:hover{
-    color: #00FFB5;
-   
+    color: #00FFB5;  
+  }
+
+  .contact ul li i {
+    font-size: 1.5em;
+    padding-bottom: 2%;
+  }
+
+
+  /*Media queries*/
+
+@media(min-width:900px){
+    
+  .contact{
+    font-size: 1em;
+}
+  .contact ul li i {
+    font-size: 2em;
+    padding-bottom: 2%;
+}
+  .contact ul {
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    }
+  }
+
+@media(min-width:1300px){
+  .contact  {
+     width: 80%;
+    }
+  }
+@media(min-width:1900px){
+  .contact  {
+     font-size: 1.5em;
+    }
   }

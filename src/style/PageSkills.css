@@ -1,8 +1,5 @@
 
 
-
-
-
 .skillsContainer{
     width: 100%;
     height: 70%;
@@ -13,42 +10,43 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-   
-    align-content: space-around;
+    align-items:center;
+    align-content: center;
     z-index: 4;
     font-family: 'Cinzel Decorative', cursive; 
     text-transform: lowercase; 
   }
-  
-  
+
   .skillsContainer div {
     flex-basis: 30%;
     text-align: center;   
   }
+
   .skillsContainer i { 
     font-size: 4em;
   }
+
   .skillsContainer div span{
     display: block;
   }
   
   
-  /*hovery dla wszystkich skilli*/
+  /*hover for all skills*/
   
-  .fa-html5:hover{
-    color: rgba(227,76,38);
+.fa-html5:hover{
+  color: rgba(227,76,38);
   }
-  .fa-css3-alt:hover{
-    color: rgba(47,128,191)
+.fa-css3-alt:hover{
+  color: rgba(47,128,191)
   }
-  .fa-js:hover{
-    color: rgba(247,223,30)
+.fa-js:hover{
+  color: rgba(247,223,30)
   }
-  .fa-react:hover{
-    color: rgba(97,218,251)
+.fa-react:hover{
+  color: rgba(97,218,251)
   }
-  .fa-git-square:hover{
-    color: rgba(0,0,0)
+.fa-git-square:hover{
+  color: rgba(0,0,0)
   }
 .fa-database:hover{
   color: rgba(66,139,199);
@@ -62,16 +60,14 @@
 .fa-java:hover{
   color: rgba(233,35,46);
 }
-
-
-
-  .skillsContainer .fab, .fas {
+.skillsContainer .fab, .fas {
     cursor: pointer;
   }
   
   
 
-  /*druga cześć skilss */
+  /*second page skilss */
+
   .skillsSecondPart{
     position: absolute;
     bottom:8%;
@@ -79,8 +75,7 @@
     background-color: transparent;
     border:none;
     font-size: 2em;
-    z-index: 5;
-   
+    z-index: 5;  
   }
   .skillsSecondPart i {
     color:white;
@@ -88,51 +83,46 @@
   }
 
 
+  /*Media Queries*/
 
-
-
-
-  @media (min-width:600px){
-   
+  @media (min-width:500px){
     .skillsContainer{
-     top:35%;
-    }    
-    
+      align-content: space-around;
+    }
+    .skillsContainer div{
+      margin-bottom: 0% !important;
+      padding-bottom: 5% !important;
+    }
   }
 
-  @media(min-width:900px){
+  @media (min-width:800px){
     .skillsContainer{
-      top: 5%;
-      align-items:center;
+      width:90%;
+      right:5%;
+      font-size: 1.2em;
+      }
+    .skillsContainer div{
+      flex-basis: 20%;
     }
-
-
-    .skillsContainer div {
-      flex-basis: 19%;
-      text-align: center;   
-    }
-    .skillsContainer i { 
-      font-size: 4em;
-    }
-    .skillsSecondPart{
-      bottom:14%;
   }
 
-  
-}
-
-@media(min-width:1024px){
-
-  .skillsContainer{
-    width: 80%;
-    transform: translateX(-10%);
-  }
-  
-}
-
-@media (orientation:portrait) and (min-width:1024px) {
-  .skillsContainer div {
-    flex-basis: 30%;
+  @media (min-width:1024px){
+    .skillsContainer{
+      width:80%;
+      right:10%;
+      }   
   }
 
-}
+  @media (min-width:1366px){
+    .skillsContainer{
+      width:70%;
+      right:15%;
+      font-size: 1.1em;
+      }
+  }
+
+  @media (min-width:1900px){
+    .skillsContainer{  
+      font-size: 2em;
+      }
+  }

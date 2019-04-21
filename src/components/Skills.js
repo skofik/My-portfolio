@@ -25,7 +25,7 @@ class Skills extends Component {
         two: {
             categoryName: "fab fa-css3-alt",
             name: "css3",
-            text: "I create RWD, use a flex-box  and I know the basics of Saas"
+            text: "I use a flex-box and create RWD "
         },
         three: {
             categoryName: "fab fa-js",
@@ -137,7 +137,7 @@ class Skills extends Component {
             <>
                 <div className="containerText">
                     <h1>Skills</h1>
-                    {secondPage ? <p> I learn and develop every day, improve my knowledge of technologies and plan to get to know:</p> : <p>I use the following technologies at the level visible in projects</p>}
+                    {secondPage ? <p> I improve my knowledge of technologies and plan to get to know:</p> : <p>I use the following technologies at the level visible in projects</p>}
                 </div>
                 {secondPage ?
                     <div className="skillsContainer" >

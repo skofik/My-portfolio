@@ -2,23 +2,25 @@
 
 .containerProjects {
     position: relative;
-    top:25%;
-    right:0%;
-    width: 100%;
-    height: 75%;
+    top:30%;
+    left:5%;    
+    width: 90%;
     z-index: 5;
- min-height: 325px;
- 
-
+    min-height: 325px;
+    max-height: 500px;
 }
 
+
+/*zrobic troche przezroczyste czy nie ???????*/
+
 .singleProject{ 
+  --zindex-number: 8.5em;
     position: absolute;
     top:0;
     right:0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.7);
     text-transform: lowercase;
     font-size: .7em;
     display:flex;
@@ -37,13 +39,12 @@
 
 
 .singleProjectLink{
-  width: 100%;
-  height:10%;
-  /* background-color: #00FFB5; */
-  display: flex;
-  flex-basis: row;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height:10%;
+    display: flex;
+    flex-basis: row;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -57,7 +58,7 @@
    
 }
 .singleProjectLink a:hover{
-  color: #00FFB5;
+    color: #00FFB5;
 }
 
 
@@ -65,53 +66,56 @@
 .singleProjectImg{
     width:100%;
     height: 50%;
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
 .singleProjectImg div {
-width: 100%;
-height:80%;
-
- background-size: cover;
- background-repeat: no-repeat;
- background-position:  center center;
+    width: 100%;
+    height:80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center center;
 
 }
 
 .singleProjectImg h2 {
-  font-size: 1.5em;
-  height: 15%;
-  padding-top:1%;
-  color: white; 
+    font-size: 1.5em;
+    height: 15%;
+    padding-top:1%;
+    color: white; 
 }
 
 /* Adding a background to the project */
 
 .one .singleProjectImg  div{
- background-image: url(../img/Project-Tic-tac-toe640x343.jpg);
+    background-image: url(../img/Project-Tic-tac-toe640x343.jpg);
 
 }
 .two .singleProjectImg  div{
-  background-image: url(../img/Calorie-counter665x307.jpg);
+    background-image: url(../img/Calorie-counter665x307.jpg);
 }
 .three .singleProjectImg  div{
-  background-image: url(../img/Portfolio681x311.jpg);
+    background-image: url(../img/Portfolio681x311.jpg);
 }
 .four .singleProjectImg  div{
-  background-image: url(../img/Portfolio681x311.jpg);
+    background-image: url(../img/Gallery3D593x304.jpg);
 }
 .five .singleProjectImg  div{
-  /* background-image: url(../img/Portfolio681x311.jpg); */
-  background-color: black;
+    background-image: url(../img/ladyIgy661x314.jpg);
 }
 
+.five .singleProjectLink a {
+  text-decoration-line: line-through;
+  text-decoration-color: white;
+}
+.five .singleProjectLink a:hover {
+  color:white;
 
-
-
+}
 
 .singleProjectText{
     width: 100%;
@@ -122,31 +126,30 @@ height:80%;
     font-size: 1em;
 }
 .singleProjectText p{
-  padding: 2%;
+    padding: 2%;
 }
 
 .singleProjectText span {
     display: inline-block;
     padding: 1%;
-   margin:2%;
-   margin-top: 5%;
-   border: 1px solid gray;
+    margin:2%;
+    margin-top: 5%;
+    border: 1px solid gray;
   
 }
 
 /*galeria 3d*/
+
 .containerProjectsRotate{
     position: absolute;
-    /* position: relative; */
     top:50%;
     right:50%;
     transform: translate(50%,-50%);
-    width: 55%;
-    /* width:176px; */
-    height: 85%;
-    /* background-color: green; */
+    width:9.9em;
+    height: 85%; 
     perspective: 600px;
 }
+
 .projectsRotate{
     height: 100%;
     width: 100%;
@@ -156,34 +159,26 @@ height:80%;
 }
 
 
-
-.one {
-    transform: rotateY(0deg) translateZ(9em) scale(0.4);  
-  
+/* rotate page about deg */
+  .one {
+    transform: rotateY(0deg) translateZ(var(--zindex-number)) scale(0.4);  
   }
-
-  .two {
-    
-    transform: rotateY(72deg) translateZ(9em) scale(0.4);
+  .two {  
+    transform: rotateY(72deg) translateZ(var(--zindex-number)) scale(0.4);
   }
-  
   .three{
-    transform: rotateY(144deg) translateZ(9em) scale(0.4);
-   
+    transform: rotateY(144deg) translateZ(var(--zindex-number)) scale(0.4); 
   }
   .four {
-    transform: rotateY(216deg) translateZ(9em) scale(0.4);
-    
+    transform: rotateY(216deg) translateZ(var(--zindex-number)) scale(0.4); 
   }
   .five{
-    transform: rotateY(288deg) translateZ(9em) scale(0.4);
-    
+    transform: rotateY(288deg) translateZ(var(--zindex-number)) scale(0.4);  
   }
 
 
 
-
-  /*strzałki*/
+  /*Arrows right left*/
   .containerProjects i{
       font-size: 1.3em;
       cursor: pointer;
@@ -193,173 +188,116 @@ height:80%;
       position: absolute;
       top:50%;
       right:6%;
-    
-
   }
   .containerProjects .fa-arrow-left {
-    position: absolute;
-    top:50%;
-    left:6%;
+      position: absolute;
+      top:50%;
+      left:6%;
 }
 
 
 
+
+
+/*Media Queries*/
+
+@media (min-width:450px){
+  .singleProject{ 
+    --zindex-number: 10em;
+    font-size: .8em;
+  }
+
+  .containerProjects {
+    top:25%;
+    height: 65%;
+}
+  .containerProjectsRotate{
+    width:12em;
+
+}
+
+}
+
+@media (min-width:520px){
+  .singleProject{ 
+    font-size: .9em;
+  }
+  .containerProjectsRotate{
+    width:14em;
   
-    
-
-/*Media Queris*/
-@media (min-width:350px){
-  .containerProjectsRotate{
-    width: 50%;
-   
-}
-.singleProjectText{
-  font-size: .8em;
-}
-}
-
-@media (min-width:420px){
-
-  .containerProjectsRotate{
-    width: 45%;
-   
-}
-}
-
-@media (min-width:460px){
-
-  .containerProjects {
-    width: 80%;
-  transform:translateX(10%);
- 
-}
-
-  .containerProjectsRotate{
-    width: 45%;
-}
-
-.singleProject{ 
-  font-size: .7em;
-}
-.singleProjectText{
-  font-size: .7em;
-}
-.singleProjectImg h2 {
-  font-size: 1.3em;
-}
-}
-@media (min-width:512px){
-  .containerProjects {
-    width: 80%;
-}
-
-  .containerProjectsRotate{
-    width: 50%;
-}
-
-.singleProject{ 
-  font-size: 1em;
-}
-.singleProjectImg h2 {
-  font-size: 1.3em;
-}
+  }
 
 }
 
 @media (min-width:650px){
-  .containerProjects {
-    width: 60%;
-    transform:translateX(30%);
+    
+  .containerProjects .fa-arrow-right {
+    right:10%;
 }
-.singleProjectImg h2 {
-  font-size: 1.2em;
+  .containerProjects .fa-arrow-left {
+    left:10%;
+}
+  .containerProjects i{
+    font-size: 1.8em;
 }
 }
 
-@media (min-width:800px){
+@media (min-width:780px){
+ 
+  .containerProjectsRotate{
+    width:16em;  
+}
   .containerProjects {
-    top:30%;
-    width: 50%;
-    height: 70%;
-    transform:translateX(50%);
-}
-.singleProjectImg h2 {
-  font-size: 1.2em;
+    width: 80%;
+    left:10%;    
 }
 }
+
 
 @media (min-width:900px){
   .containerProjects {
-    top:20%;
-    width: 45%;
-    transform:translateX(60%);
-}
-.singleProjectImg h2 {
-  font-size: 1.2em;
+    height:70%;   
 }
 }
 
-
-@media (min-width:1200px){
+@media (min-width:1024px){
+  .singleProject{ 
+    font-size: 1em;
+  }
+  .containerProjectsRotate{
+    width:18em;  
+    height: 95%;
+}
   .containerProjects {
-    top:20%;
-    width: 35%;
-    transform:translateX(90%);
+    width: 70%;
+    left:15%;
+    height: 75%;    
 }
-.singleProjectImg h2 {
-  font-size: 1.2em;
 }
 
-
-
-.one {
-  transform: rotateY(0deg) translateZ(8em) scale(0.4);  
-
+@media (min-width:1300px){ 
+  .containerProjects .fa-arrow-right {
+    right:20%;
 }
-
-.two {
-  
-  transform: rotateY(72deg) translateZ(8em) scale(0.4);
+  .containerProjects .fa-arrow-left {
+    left:20%;
 }
-
-.three{
-  transform: rotateY(144deg) translateZ(8em) scale(0.4);
- 
-}
-.four {
-  transform: rotateY(216deg) translateZ(8em) scale(0.4);
-  
-}
-.five{
-  transform: rotateY(288deg) translateZ(8em) scale(0.4);
-  
-}
-
-}
-
-@media (min-width:1400px){
-  .one {
-    transform: rotateY(0deg) translateZ(9em) scale(0.4);  
-  
-  }
-  
-  .two {
-    
-    transform: rotateY(72deg) translateZ(9em) scale(0.4);
-  }
-  
-  .three{
-    transform: rotateY(144deg) translateZ(9em) scale(0.4);
-   
-  }
-  .four {
-    transform: rotateY(216deg) translateZ(9em) scale(0.4);
-    
-  }
-  .five{
-    transform: rotateY(288deg) translateZ(9em) scale(0.4);
-    
   }
 
-
+ @media (min-width:1600px){ 
+  .singleProject{ 
+    font-size: 1.2em;
+  }
+  .containerProjectsRotate{
+    width:20em;  
+    height: 95%;
 }
+  }
+ @media (min-width:1900px){
+  .singleProject{  
+     font-size: 1.3em;
+      }
+  .containerProjectsRotate{
+     width:22em;  
+    }
+        }
