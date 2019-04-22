@@ -87,6 +87,7 @@ class Projects extends Component {
                 rotateNumber: this.state.rotateNumber + 72,
                 clickCountRight: this.state.clickCountRight + 1,
                 activeRight: true,
+                activeLeft: false,
             })
 
         } else if (e.target.className === "fas fa-arrow-left") {

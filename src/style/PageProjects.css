@@ -187,12 +187,14 @@
   .containerProjects .fa-arrow-right {
       position: absolute;
       top:50%;
-      right:6%;
+      left:6%;
+      transform: rotate(180deg);
   }
   .containerProjects .fa-arrow-left {
       position: absolute;
       top:50%;
-      left:6%;
+      right:6%;
+      transform: rotate(180deg);
 }
 
 
@@ -232,10 +234,10 @@
 @media (min-width:650px){
     
   .containerProjects .fa-arrow-right {
-    right:10%;
+    left:10%;
 }
   .containerProjects .fa-arrow-left {
-    left:10%;
+    right:10%;
 }
   .containerProjects i{
     font-size: 1.8em;
@@ -277,10 +279,10 @@
 
 @media (min-width:1300px){ 
   .containerProjects .fa-arrow-right {
-    right:20%;
+    left:20%;
 }
   .containerProjects .fa-arrow-left {
-    left:20%;
+    right:20%;
 }
   }
 
