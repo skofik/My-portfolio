@@ -29,7 +29,11 @@
   .skillsContainer div span{
     display: block;
   }
+  .skillsContainer div p {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
   
+  }
   
   /*hover for all skills*/
   
@@ -79,7 +83,10 @@
   }
   .skillsSecondPart i {
     color:white;
-    text-shadow: 2px 2px 2px black
+    text-shadow: 2px 2px 2px black;
+  }
+  .skillsSecondPart i:hover{
+    color:#00FFB5;
   }
 
 
@@ -117,7 +124,7 @@
     .skillsContainer{
       width:70%;
       right:15%;
-      font-size: 1.1em;
+      font-size: 1.2em;
       }
   }
 

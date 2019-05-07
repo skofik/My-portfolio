@@ -14,10 +14,14 @@
 }
 
 .card i {
-    font-size: 1.5em;
+    font-size: 2.2em;
     position: relative;
     top:-15%;
     right:0;
+    cursor: pointer;
+}
+.card i:hover{
+  color: #00FFB5;
 }
 
 .cardContainer{
@@ -27,7 +31,8 @@
     width: 100%;
     transition: transform 2s;
     transform-style: preserve-3d;
-    background-color: transparent;   
+    background-color: transparent;
+    
 }
 
 
@@ -64,15 +69,11 @@
    list-style-position: outside;
    list-style-type: circle;
    text-align: left;
-   font-family: 'Cinzel Decorative', cursive; 
-   text-transform: lowercase;
+   font-family: 'Montserrat', sans-serif;
+   text-transform: uppercase;
    font-size: 1em;
-   font-weight: lighter;
    text-shadow: 1px 1px 1px black;
-   background-color: transparent;
-   
-
-
+   background-color: transparent;  
 }
 .back ul {
   font-size: .9em;

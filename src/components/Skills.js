@@ -20,7 +20,7 @@ class Skills extends Component {
         one: {
             categoryName: "fab fa-html5",
             name: "Html5",
-            text: "I'm trying to write a semantic code"
+            text: "I write semantic code"
         },
         two: {
             categoryName: "fab fa-css3-alt",

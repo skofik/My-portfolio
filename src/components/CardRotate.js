@@ -27,7 +27,7 @@ class CardRotate extends Component {
             <div className="card">
 
                 <div className="cardContainer" style={this.state.rotate ? { transform: "rotateY(-180deg)" } : null}>
-                    <i className="fas fa-sync-alt" onClick={this.handleRotateCard}></i>
+                    <i className="far fa-arrow-alt-circle-right" onClick={this.handleRotateCard}></i>
                     <div className="front"  >
                         <div>
                             <h2>About me</h2>

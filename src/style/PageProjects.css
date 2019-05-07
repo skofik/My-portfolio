@@ -124,6 +124,8 @@
     text-align: center;
     background-color: rgba(0,0,0,0.1);
     font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 .singleProjectText p{
     padding: 2%;
@@ -182,6 +184,9 @@
   .containerProjects i{
       font-size: 1.3em;
       cursor: pointer;
+  }
+  .containerProjects i:hover{
+    color:#00FFB5;
   }
   
   .containerProjects .fa-arrow-right {

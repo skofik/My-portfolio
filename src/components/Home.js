@@ -10,7 +10,7 @@ const Home = () => {
 
             <div className="containerText">
                 <h1>Daniel Skowron</h1>
-                <p> Junior front-end developer</p>
+                <p> For today, front-end developer</p>
             </div>
             <CardRotate />
         </>
