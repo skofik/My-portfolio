@@ -1,5 +1,4 @@
 
-
 .containerProjects {
     position: relative;
     top:30%;
@@ -8,10 +7,13 @@
     z-index: 5;
     min-height: 325px;
     max-height: 500px;
+    animation: transformContainerProjects .6s linear;
 }
-
-
-/*zrobic troche przezroczyste czy nie ???????*/
+/*Animation projects */
+@keyframes transformContainerProjects{
+  0%{ transform: translateY(100%);}
+  100% { transform: translateY(0%);}
+}
 
 .singleProject{ 
   --zindex-number: 8.5em;
@@ -187,6 +189,7 @@
   }
   .containerProjects i:hover{
     color:#00FFB5;
+    transform: rotate(180deg) scale(1.1);
   }
   
   .containerProjects .fa-arrow-right {

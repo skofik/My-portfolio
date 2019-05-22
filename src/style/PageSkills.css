@@ -17,13 +17,57 @@
     text-transform: lowercase; 
   }
 
+  /*Animation ContainerText All*/
+  
+  @keyframes transformContainerText{
+    0%{ transform: translateY(250%);}
+    100% { transform: translateY(0%);}
+  }
+  .containerText{
+    animation: transformContainerText .6s linear;
+  }
   .skillsContainer div {
     flex-basis: 30%;
-    text-align: center;   
+    text-align: center;
+  }
+  .skillsContainer div:nth-child(1){
+    animation: transformContainerText .4s linear;   
+  }
+  .skillsContainer div:nth-child(2){
+    animation: transformContainerText .6s linear;   
+  }
+  .skillsContainer div:nth-child(3){
+    animation: transformContainerText .7s linear;   
+  }
+  .skillsContainer div:nth-child(4){
+    animation: transformContainerText .8s linear;   
+  }
+  .skillsContainer div:nth-child(5){
+    animation: transformContainerText 1s linear;   
   }
 
+/*Animation for future skills*/
+  @keyframes move {
+    0%{transform: translateY(250%)}
+    100%{transform: translateY(0%)}
+  }
+  .second div:nth-child(1){
+    animation: move .4s linear;
+  }
+  .second div:nth-child(2){
+    animation: move .6s linear;
+  }
+  .second div:nth-child(3){
+    animation: move .7s linear;
+  }
+  .second div:nth-child(4){
+    animation: move .8s linear;
+  }
+ 
+ 
   .skillsContainer i { 
     font-size: 4em;
+    transition: .2s linear;
   }
 
   .skillsContainer div span{
@@ -67,8 +111,10 @@
 .skillsContainer .fab, .fas {
     cursor: pointer;
   }
-  
-  
+.skillsContainer .fab:hover, .fas:hover{
+    transform: scale(1.2);
+  }
+
 
   /*second page skilss */
 
@@ -87,6 +133,7 @@
   }
   .skillsSecondPart i:hover{
     color:#00FFB5;
+    transform: translateY(1px);
   }
 
 

@@ -1,5 +1,4 @@
 
-
 .card{
     width: 60%;
     height: 45%;
@@ -11,7 +10,13 @@
     text-align: center;
     min-height: 262px;
     background-color: transparent;
+    animation: transformCard .6s linear;
 }
+/*Animaton Card*/
+@keyframes transformCard{
+  0%{ transform: translate(-50%,100%)}
+  100% { transform: translate(-50%,-50%)}
+ }
 
 .card i {
     font-size: 2.2em;
@@ -20,8 +25,9 @@
     right:0;
     cursor: pointer;
 }
-.card i:hover{
+.card .fa-arrow-alt-circle-right:hover{
   color: #00FFB5;
+  transform: translateY(1px);
 }
 
 .cardContainer{
@@ -77,20 +83,16 @@
 }
 .back ul {
   font-size: .9em;
-
-
 }
 
 .front ul li, .back ul li {
   width: 100%;
   padding-top: 6%;
- 
-
 }
 
 
 
-.front::before, .back::before {
+.front::after, .back::after {
     content: '';
     position: absolute;
     top: 3%;
@@ -98,16 +100,10 @@
     left: 3%;
     right: 3%;
     border-radius: 15%;
-    transform: translateZ(20px); border: 1px solid #00FFB5;
+    border: 1px solid #00FFB5;
     background-color: transparent;
- 
-
-   
+    z-index: 4;
   }
-
-
-
-
 
 .front h2, .back h2 {  
     font-family: 'Shojumaru', cursive;
@@ -122,10 +118,10 @@
 /*Arrow change text*/
 .back i {
     position: absolute;
-    top:87%;
-    right:9%;
-    font-size: 1em;
-    transform: translateZ(30px);
+    top:86%;
+    right:10%;
+    font-size: 1.1em;
+    z-index: 5;
 }
 
 .back i:hover{

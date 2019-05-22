@@ -125,22 +125,18 @@ class Skills extends Component {
         else if (java) return ({ color: "rgba(233,35,46)" })
     }
 
-
-
     render() {
-
-
         const { html5, css3, js, react, git, sql, node, php, java, secondPage } = this.state;
         const { one, two, three, four, five, six, seven, eight, nine } = this.skills
 
         return (
             <>
-                <div className="containerText">
+                <div className="containerText skills" >
                     <h1>Skills</h1>
                     {secondPage ? <p> I improve my knowledge of technologies and plan to get to know:</p> : <p>I use the following technologies at the level visible in projects</p>}
                 </div>
                 {secondPage ?
-                    <div className="skillsContainer" >
+                    <div className="skillsContainer second" >
                         <SingleSkil handleClik={this.handleClik.bind(this)} content={sql} changeStyle={this.changeStyle} skill={six} />
                         <SingleSkil handleClik={this.handleClik.bind(this)} content={node} changeStyle={this.changeStyle} skill={seven} />
                         <SingleSkil handleClik={this.handleClik.bind(this)} content={php} changeStyle={this.changeStyle} skill={eight} />

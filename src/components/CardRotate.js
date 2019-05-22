@@ -13,7 +13,7 @@ class CardRotate extends Component {
         })
     }
     handleChangeText = () => {
-
+        console.log("działa")
         this.setState({
             changeText: !this.state.changeText
         })

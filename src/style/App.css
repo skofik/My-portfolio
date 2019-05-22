@@ -143,7 +143,7 @@ span.buttonHamburger:hover {
   box-shadow: -50px 0px 0px rgb(0,0,0, 0.15); 
   border-left: solid 1px #00FFB5;
   z-index: 1;
-
+  /* transition: .5s linear; */
 }
  .containerText p {
   padding-left: 3%;
